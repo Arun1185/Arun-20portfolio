@@ -120,7 +120,7 @@
 
 @layer components {
   .portfolio-card {
-    @apply bg-[hsl(var(--portfolio-card))] border border-[hsl(var(--portfolio-border))] rounded-lg;
+    @apply bg-[hsl(var(--portfolio-card))] border border-[hsl(var(--portfolio-border))] rounded-lg backdrop-blur-sm;
   }
 
   .portfolio-section {
@@ -142,4 +142,45 @@
   .portfolio-accent {
     @apply text-[hsl(var(--portfolio-accent))];
   }
+
+  /* Custom animations */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 20px -10px hsl(var(--portfolio-accent));
+  }
+  to {
+    box-shadow: 0 0 20px -5px hsl(var(--portfolio-accent)), 0 0 30px -10px hsl(var(--portfolio-accent));
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--portfolio-border));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--portfolio-accent));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--portfolio-accent));
 }
