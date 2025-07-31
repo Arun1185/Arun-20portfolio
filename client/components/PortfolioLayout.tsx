@@ -13,8 +13,13 @@ import {
   Instagram,
   Phone,
   Menu,
-  X
+  X,
+  Sun,
+  Moon
 } from 'lucide-react';
+import { useTheme } from '../contexts/ThemeContext';
+import StylishPhoto from './StylishPhoto';
+import RotatingTitle from './RotatingTitle';
 
 interface LayoutProps {
   children: React.ReactNode;
