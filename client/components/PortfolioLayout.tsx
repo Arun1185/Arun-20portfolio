@@ -106,20 +106,44 @@ export default function PortfolioLayout({ children }: LayoutProps) {
                     to={item.href}
                     onClick={closeMobileMenu}
                     className={`
-                      flex items-center px-4 py-3 rounded-lg transition-all duration-200
+                      group flex items-center px-4 py-3 rounded-xl transition-all duration-300
+                      hover:scale-105 hover:shadow-lg
                       ${isActive
-                        ? 'bg-portfolio-accent text-white shadow-lg'
-                        : 'text-portfolio-text-muted hover:text-portfolio-text hover:bg-portfolio-border'
+                        ? 'bg-gradient-to-r from-portfolio-accent to-blue-500 text-white shadow-xl'
+                        : 'text-portfolio-text-muted hover:text-portfolio-text hover:bg-portfolio-border/50 hover:shadow-md'
                       }
                     `}
                   >
-                    <item.icon className="h-5 w-5 mr-3" />
-                    {item.name}
+                    <item.icon className={`h-5 w-5 mr-3 transition-transform duration-300 ${isActive ? '' : 'group-hover:scale-110'}`} />
+                    <span className="font-medium">{item.name}</span>
+                    {isActive && (
+                      <div className="ml-auto w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                    )}
                   </Link>
                 </li>
               );
             })}
           </ul>
+
+          {/* Theme Toggle */}
+          <div className="mt-6 pt-6 border-t border-portfolio-border">
+            <button
+              onClick={toggleTheme}
+              className="w-full flex items-center justify-center px-4 py-3 rounded-xl bg-portfolio-border/50 hover:bg-portfolio-accent/10 text-portfolio-text-muted hover:text-portfolio-accent transition-all duration-300 hover:scale-105"
+            >
+              {theme === 'light' ? (
+                <>
+                  <Moon className="h-5 w-5 mr-2" />
+                  <span className="font-medium">Dark Mode</span>
+                </>
+              ) : (
+                <>
+                  <Sun className="h-5 w-5 mr-2" />
+                  <span className="font-medium">Light Mode</span>
+                </>
+              )}
+            </button>
+          </div>
         </nav>
 
         {/* Social Links */}
