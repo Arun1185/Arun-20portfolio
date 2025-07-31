@@ -35,11 +35,11 @@ const navigation = [
 ];
 
 const socialLinks = [
-  { name: 'GitHub', href: '#', icon: Github },
-  { name: 'LinkedIn', href: '#', icon: Linkedin },
-  { name: 'Twitter', href: '#', icon: Twitter },
-  { name: 'Instagram', href: '#', icon: Instagram },
-  { name: 'Phone', href: '#', icon: Phone },
+  { name: 'GitHub', href: 'https://github.com/alexanderchen', icon: Github },
+  { name: 'LinkedIn', href: 'https://linkedin.com/in/alexanderchen', icon: Linkedin },
+  { name: 'Twitter', href: 'https://twitter.com/alexanderchen', icon: Twitter },
+  { name: 'Instagram', href: 'https://instagram.com/alexanderchen', icon: Instagram },
+  { name: 'Phone', href: 'tel:+15551234567', icon: Phone },
 ];
 
 export default function PortfolioLayout({ children }: LayoutProps) {
