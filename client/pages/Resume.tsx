@@ -59,6 +59,44 @@ export default function Resume() {
     { name: 'AWS/Cloud', level: 75 }
   ];
 
+  const communicationSkills = [
+    {
+      icon: MessageCircle,
+      title: 'Verbal Communication',
+      level: 95,
+      description: 'Clear articulation of complex technical concepts to diverse audiences'
+    },
+    {
+      icon: Users,
+      title: 'Team Collaboration',
+      level: 90,
+      description: 'Leading cross-functional teams and facilitating productive meetings'
+    },
+    {
+      icon: Presentation,
+      title: 'Presentation Skills',
+      level: 88,
+      description: 'Delivering compelling presentations to stakeholders and clients'
+    },
+    {
+      icon: Globe,
+      title: 'Written Communication',
+      level: 92,
+      description: 'Creating clear documentation, proposals, and technical specifications'
+    }
+  ];
+
+  const handleDownloadResume = () => {
+    // Create a simple PDF download simulation
+    // In a real app, you would generate a PDF or serve a pre-made PDF file
+    const link = document.createElement('a');
+    link.href = '/api/resume-download'; // This would be your PDF endpoint
+    link.download = 'Alexander_Chen_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="portfolio-section">
       <div className="max-w-6xl mx-auto">
