@@ -80,17 +80,12 @@ export default function Home() {
           {/* Profile Image */}
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
-              <div className="w-80 h-80 rounded-2xl bg-gradient-to-br from-portfolio-accent to-blue-600 p-1">
-                <div className="w-full h-full rounded-2xl bg-portfolio-card flex items-center justify-center">
-                  <div className="w-72 h-72 rounded-xl bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
-                    <span className="text-6xl font-bold text-gray-600">AC</span>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Floating Elements */}
-              <div className="absolute -top-6 -right-6 w-20 h-20 bg-portfolio-accent rounded-full opacity-20"></div>
-              <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-blue-600 rounded-full opacity-10"></div>
+              <StylishPhoto size="xl" initials="AC" />
+
+              {/* Additional floating elements */}
+              <div className="absolute -top-8 -right-8 w-16 h-16 bg-purple-500 rounded-full opacity-30 animate-bounce"></div>
+              <div className="absolute -bottom-10 -left-10 w-20 h-20 bg-blue-600 rounded-full opacity-20 animate-pulse"></div>
+              <div className="absolute top-1/2 -right-6 w-8 h-8 bg-yellow-400 rounded-full opacity-40 animate-ping"></div>
             </div>
           </div>
         </div>
