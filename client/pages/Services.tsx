@@ -71,8 +71,12 @@ export default function Services() {
   ];
 
   return (
-    <div className="portfolio-section">
-      <div className="max-w-7xl mx-auto">
+    <div className="portfolio-section relative">
+      {/* Subtle background decoration */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-portfolio-accent/5 to-blue-500/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-purple-500/5 to-portfolio-accent/5 rounded-full blur-3xl"></div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="portfolio-heading">Services</h1>
