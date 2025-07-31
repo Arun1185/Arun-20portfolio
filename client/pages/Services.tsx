@@ -113,8 +113,12 @@ export default function Services() {
             </div>
             
             <div className="flex justify-center">
-              <div className="w-96 h-64 bg-gradient-to-br from-gray-300 to-gray-400 rounded-lg flex items-center justify-center">
-                <span className="text-gray-600 font-medium">Service Image</span>
+              <div className="w-96 h-64 rounded-lg overflow-hidden shadow-2xl">
+                <img
+                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=400&fit=crop&auto=format&q=80"
+                  alt="Digital Marketing Team"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>
