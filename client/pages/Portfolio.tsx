@@ -121,7 +121,7 @@ export default function Portfolio() {
       id: 5,
       title: 'Analytics Dashboard',
       category: 'Backend',
-      image: '/api/placeholder/400/300',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&auto=format&q=80',
       description: 'Real-time analytics dashboard with data visualization and reporting capabilities for enterprise-level data processing.',
       technologies: ['Python', 'Django', 'Chart.js', 'Redis', 'Docker'],
       githubUrl: 'https://github.com/alexanderchen/analytics-dashboard',
