@@ -1,5 +1,7 @@
 import React from 'react';
 import { MapPin, Phone, Mail, Calendar, Award } from 'lucide-react';
+import StylishPhoto from '../components/StylishPhoto';
+import RotatingTitle from '../components/RotatingTitle';
 
 export default function About() {
   return (
