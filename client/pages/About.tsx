@@ -4,32 +4,36 @@ import StylishPhoto from '../components/StylishPhoto';
 import RotatingTitle from '../components/RotatingTitle';
 
 export default function About() {
+  const jobTitles = [
+    'Creative Director',
+    'UI Developer',
+    'UX Researcher'
+  ];
+
   return (
     <div className="portfolio-section">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <button className="px-4 py-2 bg-portfolio-card text-portfolio-accent rounded-full text-sm mb-4">
+          <button className="px-4 py-2 bg-portfolio-card text-portfolio-accent rounded-full text-sm mb-4 shadow-lg hover:shadow-xl transition-all duration-300">
             Get to Know Me
           </button>
           <h1 className="portfolio-heading text-center">
             Passionate About Creating Digital
             <br />
-            Experiences
+            <span className="bg-gradient-to-r from-portfolio-accent to-blue-500 bg-clip-text text-transparent">Experiences</span>
           </h1>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Profile Card */}
-          <div className="portfolio-card p-8">
+          <div className="portfolio-card p-8 hover:shadow-2xl transition-all duration-300">
             <div className="text-center mb-6">
-              <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-portfolio-accent to-blue-600 p-1">
-                <div className="w-full h-full rounded-full bg-portfolio-card flex items-center justify-center">
-                  <span className="text-3xl font-bold text-portfolio-text">AC</span>
-                </div>
-              </div>
+              <StylishPhoto size="lg" initials="AC" className="mx-auto mb-4" />
               <h2 className="text-2xl font-bold text-portfolio-text mb-2">Marcus Thompson</h2>
-              <p className="text-portfolio-accent font-medium">Creative Director & UI Developer</p>
+              <div className="text-portfolio-accent font-medium">
+                <RotatingTitle titles={jobTitles} interval={3000} />
+              </div>
             </div>
 
             <div className="space-y-4">
