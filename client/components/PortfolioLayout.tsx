@@ -148,16 +148,23 @@ export default function PortfolioLayout({ children }: LayoutProps) {
 
         {/* Social Links */}
         <div className="p-6 border-t border-portfolio-border">
-          <div className="flex justify-center space-x-4">
+          <div className="flex justify-center space-x-3">
             {socialLinks.map((social) => (
               <a
                 key={social.name}
                 href={social.href}
-                className="text-portfolio-text-muted hover:text-portfolio-accent transition-colors duration-200"
+                className="group p-2 rounded-lg bg-portfolio-border/30 hover:bg-portfolio-accent hover:shadow-lg text-portfolio-text-muted hover:text-white transition-all duration-300 hover:scale-110"
+                title={social.name}
               >
-                <social.icon className="h-5 w-5" />
+                <social.icon className="h-4 w-4 transition-transform duration-300 group-hover:rotate-12" />
               </a>
             ))}
+          </div>
+
+          <div className="text-center mt-4">
+            <p className="text-xs text-portfolio-text-muted">
+              © 2024 Alexander Chen
+            </p>
           </div>
         </div>
       </div>
