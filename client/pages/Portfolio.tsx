@@ -268,15 +268,17 @@ export default function Portfolio() {
 
                 {/* Links */}
                 <div className="flex space-x-4">
-                  <a
-                    href={project.liveUrl}
-                    className="flex items-center text-portfolio-accent hover:text-portfolio-text transition-colors duration-200 text-sm"
+                  <button
+                    onClick={() => setSelectedProject(project.id)}
+                    className="flex items-center text-portfolio-accent hover:text-portfolio-text transition-colors duration-200 text-sm font-medium"
                   >
-                    <ExternalLink className="h-4 w-4 mr-1" />
-                    Live Demo
-                  </a>
+                    <Eye className="h-4 w-4 mr-1" />
+                    View Details
+                  </button>
                   <a
                     href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center text-portfolio-text-muted hover:text-portfolio-text transition-colors duration-200 text-sm"
                   >
                     <Github className="h-4 w-4 mr-1" />
