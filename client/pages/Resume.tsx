@@ -70,7 +70,7 @@ export default function Resume() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-12">
+        <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
           {/* Left Column - Profile & Skills */}
           <div className="space-y-8">
             {/* Profile Image */}
