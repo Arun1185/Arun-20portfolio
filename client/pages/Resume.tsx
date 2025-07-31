@@ -1,5 +1,6 @@
 import React from 'react';
 import { Calendar, MapPin, Award, GraduationCap, CheckCircle } from 'lucide-react';
+import StylishPhoto from '../components/StylishPhoto';
 
 export default function Resume() {
   const experiences = [
