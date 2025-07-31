@@ -85,7 +85,7 @@ export default function About() {
             {/* Skills */}
             <div>
               <h3 className="text-lg font-semibold text-portfolio-text mb-4">Specialized Skills</h3>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-4 mb-6">
                 <div>
                   <div className="flex justify-between mb-2">
                     <span className="text-portfolio-text-muted">UI/UX Design & Development</span>
@@ -98,6 +98,15 @@ export default function About() {
                     <span className="text-portfolio-accent">Senior Professional</span>
                   </div>
                 </div>
+              </div>
+
+              {/* Workspace Image */}
+              <div className="mt-6 rounded-lg overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=300&fit=crop&auto=format&q=80"
+                  alt="Modern workspace"
+                  className="w-full h-48 object-cover"
+                />
               </div>
             </div>
           </div>
