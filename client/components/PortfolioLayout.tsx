@@ -1,17 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { 
-  Home, 
-  User, 
-  FileText, 
-  Briefcase, 
-  Settings, 
-  Mail, 
-  Github, 
-  Linkedin, 
-  Twitter, 
-  Instagram, 
-  Phone 
+import {
+  Home,
+  User,
+  FileText,
+  Briefcase,
+  Settings,
+  Mail,
+  Github,
+  Linkedin,
+  Twitter,
+  Instagram,
+  Phone,
+  Menu,
+  X
 } from 'lucide-react';
 
 interface LayoutProps {
