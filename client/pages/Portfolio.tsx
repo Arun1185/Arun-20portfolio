@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ExternalLink, Github, Eye } from 'lucide-react';
+import ProjectDetail from '../components/ProjectDetail';
 
 export default function Portfolio() {
   const [activeFilter, setActiveFilter] = useState('All Projects');
