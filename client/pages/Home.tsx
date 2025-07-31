@@ -4,9 +4,9 @@ import { ArrowRight, Download } from 'lucide-react';
 
 export default function Home() {
   return (
-    <div className="portfolio-section flex items-center justify-center">
-      <div className="max-w-4xl mx-auto px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <div className="portfolio-section flex items-center justify-center px-4 lg:px-8">
+      <div className="max-w-4xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Content */}
           <div className="space-y-6">
             <div className="space-y-4">
