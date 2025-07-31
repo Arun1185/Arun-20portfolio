@@ -60,8 +60,12 @@ export default function ProjectDetail({ project, onClose }: ProjectDetailProps) 
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-6">
             {/* Project Image */}
-            <div className="aspect-video bg-gradient-to-br from-gray-300 to-gray-400 rounded-lg flex items-center justify-center">
-              <span className="text-gray-600 font-medium">Project Preview</span>
+            <div className="aspect-video bg-gradient-to-br from-gray-300 to-gray-400 rounded-lg overflow-hidden">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-full object-cover"
+              />
             </div>
 
             {/* Description */}
