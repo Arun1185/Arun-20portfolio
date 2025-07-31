@@ -309,6 +309,14 @@ export default function Portfolio() {
             </a>
           </div>
         </div>
+
+        {/* Project Detail Modal */}
+        {selectedProject && (
+          <ProjectDetail
+            project={projects.find(p => p.id === selectedProject)!}
+            onClose={() => setSelectedProject(null)}
+          />
+        )}
       </div>
     </div>
   );
