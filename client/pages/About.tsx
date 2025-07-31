@@ -17,7 +17,7 @@ export default function About() {
           </h1>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Profile Card */}
           <div className="portfolio-card p-8">
             <div className="text-center mb-6">
