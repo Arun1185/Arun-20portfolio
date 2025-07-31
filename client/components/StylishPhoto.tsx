@@ -32,14 +32,28 @@ export default function StylishPhoto({
       {/* Main photo container with gradient border */}
       <div className="relative w-full h-full rounded-2xl bg-gradient-to-br from-portfolio-accent via-blue-500 to-purple-600 p-1 shadow-2xl">
         {/* Inner photo container */}
-        <div className="relative w-full h-full rounded-2xl bg-gradient-to-br from-gray-100 to-gray-300 dark:from-gray-700 dark:to-gray-800 overflow-hidden">
-          {/* Photo placeholder with initials */}
-          <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-portfolio-accent/10 to-blue-500/10">
+        <div className="relative w-full h-full rounded-2xl overflow-hidden">
+          {/* Actual photo */}
+          <img
+            src={imageUrl}
+            alt="Profile"
+            className="w-full h-full object-cover"
+            onError={(e) => {
+              // Fallback to initials if image fails to load
+              const target = e.target as HTMLImageElement;
+              target.style.display = 'none';
+              const fallback = target.nextElementSibling as HTMLElement;
+              if (fallback) fallback.style.display = 'flex';
+            }}
+          />
+
+          {/* Fallback with initials (hidden by default) */}
+          <div className="absolute inset-0 w-full h-full hidden items-center justify-center bg-gradient-to-br from-portfolio-accent/10 to-blue-500/10">
             <span className={`font-bold text-portfolio-text ${initialsSizes[size]}`}>
               {initials}
             </span>
           </div>
-          
+
           {/* Overlay effects */}
           <div className="absolute inset-0 bg-gradient-to-t from-portfolio-accent/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
         </div>
