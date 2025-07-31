@@ -29,7 +29,12 @@ export default function About() {
           {/* Profile Card */}
           <div className="portfolio-card p-8 hover:shadow-2xl transition-all duration-300">
             <div className="text-center mb-6">
-              <StylishPhoto size="lg" initials="AC" className="mx-auto mb-4" />
+              <StylishPhoto
+                size="lg"
+                initials="AC"
+                className="mx-auto mb-4"
+                imageUrl="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face&auto=format&q=80"
+              />
               <h2 className="text-2xl font-bold text-portfolio-text mb-2">Marcus Thompson</h2>
               <div className="text-portfolio-accent font-medium">
                 <RotatingTitle titles={jobTitles} interval={3000} />
