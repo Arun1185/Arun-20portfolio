@@ -67,7 +67,7 @@ export default function Portfolio() {
       id: 3,
       title: 'Digital Banking Interface',
       category: 'UI/UX',
-      image: '/api/placeholder/400/300',
+      image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop&auto=format&q=80',
       description: 'Intuitive banking interface design focused on user experience and accessibility, with modern design principles and security features.',
       technologies: ['Figma', 'Sketch', 'Principle', 'Adobe XD'],
       githubUrl: 'https://github.com/alexanderchen/banking-ui',
