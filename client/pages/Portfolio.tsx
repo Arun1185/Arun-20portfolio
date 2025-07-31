@@ -220,15 +220,19 @@ export default function Portfolio() {
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <div className="flex space-x-4">
-                    <a
-                      href={project.liveUrl}
-                      className="p-3 bg-portfolio-accent rounded-full text-white hover:bg-opacity-80 transition-all duration-200"
+                    <button
+                      onClick={() => setSelectedProject(project.id)}
+                      className="p-3 bg-portfolio-accent rounded-full text-white hover:bg-opacity-80 transition-all duration-200 hover:scale-110"
+                      title="View Details"
                     >
                       <Eye className="h-5 w-5" />
-                    </a>
+                    </button>
                     <a
                       href={project.githubUrl}
-                      className="p-3 bg-portfolio-card rounded-full text-portfolio-text hover:bg-portfolio-border transition-all duration-200"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-3 bg-portfolio-card rounded-full text-portfolio-text hover:bg-portfolio-border transition-all duration-200 hover:scale-110"
+                      title="View Source Code"
                     >
                       <Github className="h-5 w-5" />
                     </a>
