@@ -5,6 +5,12 @@ import StylishPhoto from '../components/StylishPhoto';
 import RotatingTitle from '../components/RotatingTitle';
 
 export default function Home() {
+  const jobTitles = [
+    'UI/UX Designer',
+    'Frontend Developer',
+    'Full Stack Developer'
+  ];
+
   return (
     <div className="portfolio-section flex items-center justify-center px-4 lg:px-8">
       <div className="max-w-4xl mx-auto">
@@ -12,14 +18,14 @@ export default function Home() {
           {/* Content */}
           <div className="space-y-6">
             <div className="space-y-4">
-              <h1 className="text-5xl lg:text-6xl font-bold text-portfolio-text leading-tight">
+              <h1 className="text-5xl lg:text-6xl font-bold text-portfolio-text leading-tight bg-gradient-to-r from-portfolio-accent to-blue-500 bg-clip-text text-transparent">
                 SnapFolio
               </h1>
-              <h2 className="text-2xl font-semibold text-portfolio-accent">
+              <h2 className="text-2xl font-semibold text-portfolio-text">
                 Alexander Chen
               </h2>
-              <p className="text-lg text-portfolio-text-muted">
-                I'm a UI/UX Designer
+              <p className="text-lg text-portfolio-accent font-medium">
+                I'm a <RotatingTitle titles={jobTitles} interval={2500} />
               </p>
             </div>
             
