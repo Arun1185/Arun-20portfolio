@@ -124,7 +124,12 @@ export default function Resume() {
           <div className="space-y-8">
             {/* Profile Image */}
             <div className="portfolio-card p-6 text-center hover:shadow-xl transition-all duration-300">
-              <StylishPhoto size="lg" initials="AC" className="mx-auto mb-4" />
+              <StylishPhoto
+                size="lg"
+                initials="AC"
+                className="mx-auto mb-4"
+                imageUrl="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face&auto=format&q=80"
+              />
               
               <h3 className="text-xl font-bold text-portfolio-text mb-2">Professional Summary</h3>
               <p className="text-sm text-portfolio-text-muted leading-relaxed">
