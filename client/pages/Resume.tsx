@@ -152,25 +152,64 @@ export default function Resume() {
               </div>
             </div>
 
-            {/* Technical Skills */}
+            {/* Skills Tabs */}
             <div className="portfolio-card p-6">
-              <h3 className="text-lg font-semibold text-portfolio-text mb-4">Technical Skills</h3>
-              <div className="space-y-4">
-                {skills.map((skill, index) => (
-                  <div key={index}>
-                    <div className="flex justify-between text-sm mb-1">
-                      <span className="text-portfolio-text">{skill.name}</span>
-                      <span className="text-portfolio-accent">{skill.level}%</span>
-                    </div>
-                    <div className="w-full bg-portfolio-border rounded-full h-2">
-                      <div 
-                        className="bg-portfolio-accent h-2 rounded-full transition-all duration-1000"
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
+              <h3 className="text-lg font-semibold text-portfolio-text mb-6">Skills & Expertise</h3>
+              <Tabs
+                tabs={[
+                  {
+                    id: 'technical',
+                    label: 'Technical Skills',
+                    content: (
+                      <div className="space-y-4">
+                        {skills.map((skill, index) => (
+                          <div key={index}>
+                            <div className="flex justify-between text-sm mb-1">
+                              <span className="text-portfolio-text">{skill.name}</span>
+                              <span className="text-portfolio-accent">{skill.level}%</span>
+                            </div>
+                            <div className="w-full bg-portfolio-border rounded-full h-2">
+                              <div
+                                className="bg-portfolio-accent h-2 rounded-full transition-all duration-1000"
+                                style={{ width: `${skill.level}%` }}
+                              ></div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    )
+                  },
+                  {
+                    id: 'communication',
+                    label: 'Communication',
+                    content: (
+                      <div className="space-y-6">
+                        {communicationSkills.map((skill, index) => (
+                          <div key={index} className="flex items-start space-x-4">
+                            <div className="w-12 h-12 bg-portfolio-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                              <skill.icon className="h-6 w-6 text-portfolio-accent" />
+                            </div>
+                            <div className="flex-1">
+                              <div className="flex justify-between items-center mb-2">
+                                <h4 className="font-medium text-portfolio-text">{skill.title}</h4>
+                                <span className="text-portfolio-accent text-sm font-medium">{skill.level}%</span>
+                              </div>
+                              <p className="text-portfolio-text-muted text-sm mb-3">{skill.description}</p>
+                              <div className="w-full bg-portfolio-border rounded-full h-2">
+                                <div
+                                  className="bg-portfolio-accent h-2 rounded-full transition-all duration-1000"
+                                  style={{ width: `${skill.level}%` }}
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    )
+                  }
+                ]}
+                defaultTab="technical"
+              />
             </div>
           </div>
 
