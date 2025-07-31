@@ -4,6 +4,7 @@ interface StylishPhotoProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
   initials?: string;
   className?: string;
+  imageUrl?: string;
 }
 
 const sizeClasses = {
