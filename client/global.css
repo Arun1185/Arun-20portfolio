@@ -4,18 +4,19 @@
 
 @layer base {
   /**
-   * Portfolio Dark Theme
-   * Custom color variables for the IT portfolio design
+   * Portfolio Theme System
+   * Custom color variables with light/dark mode support
   */
   :root {
-    --background: 210 11% 15%;
-    --foreground: 0 0% 98%;
+    /* Light Mode (Default) */
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
 
-    --card: 210 11% 15%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
 
-    --popover: 210 11% 15%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
 
     --primary: 142 86% 28%;
     --primary-foreground: 0 0% 98%;
@@ -32,11 +33,58 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
     --ring: 142 86% 28%;
 
     --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 142 86% 28%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 142 86% 28%;
+
+    --portfolio-bg: 0 0% 100%;
+    --portfolio-card: 0 0% 98%;
+    --portfolio-text: 222.2 84% 4.9%;
+    --portfolio-text-muted: 215.4 16.3% 46.9%;
+    --portfolio-accent: 142 86% 28%;
+    --portfolio-border: 214.3 31.8% 91.4%;
+  }
+
+  .dark {
+    /* Dark Mode */
+    --background: 210 11% 15%;
+    --foreground: 0 0% 98%;
+
+    --card: 210 11% 15%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 210 11% 15%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 142 86% 28%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 142 86% 28%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 142 86% 28%;
 
     --sidebar-background: 220 13% 18%;
     --sidebar-foreground: 0 0% 98%;
