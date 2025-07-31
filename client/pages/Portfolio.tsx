@@ -94,7 +94,7 @@ export default function Portfolio() {
       id: 4,
       title: 'Real Estate Platform',
       category: 'Web Design',
-      image: '/api/placeholder/400/300',
+      image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop&auto=format&q=80',
       description: 'Complete real estate marketplace with advanced search, virtual tours, and comprehensive property management system.',
       technologies: ['Next.js', 'TypeScript', 'PostgreSQL', 'AWS'],
       githubUrl: 'https://github.com/alexanderchen/realestate-platform',
