@@ -21,10 +21,11 @@ const initialsSizes = {
   xl: 'text-6xl'
 };
 
-export default function StylishPhoto({ 
-  size = 'md', 
+export default function StylishPhoto({
+  size = 'md',
   initials = 'AC',
-  className = '' 
+  className = '',
+  imageUrl = 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face&auto=format&q=80'
 }: StylishPhotoProps) {
   return (
     <div className={`relative ${sizeClasses[size]} ${className}`}>
