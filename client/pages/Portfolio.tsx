@@ -148,7 +148,7 @@ export default function Portfolio() {
       id: 6,
       title: 'Social Media App',
       category: 'Mobile Apps',
-      image: '/api/placeholder/400/300',
+      image: 'https://images.unsplash.com/photo-1611605698335-8b1569810432?w=600&h=400&fit=crop&auto=format&q=80',
       description: 'Social networking platform with real-time messaging, content sharing, and advanced community features.',
       technologies: ['Flutter', 'Firebase', 'WebRTC', 'Node.js'],
       githubUrl: 'https://github.com/alexanderchen/social-app',
