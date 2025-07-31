@@ -102,10 +102,19 @@ export default function Resume() {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="portfolio-heading">Resume</h1>
+          <div className="flex flex-col sm:flex-row items-center justify-between mb-6">
+            <h1 className="portfolio-heading mb-4 sm:mb-0">Resume</h1>
+            <button
+              onClick={handleDownloadResume}
+              className="inline-flex items-center px-6 py-3 bg-portfolio-accent text-white rounded-lg hover:bg-opacity-90 transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105"
+            >
+              <Download className="h-4 w-4 mr-2" />
+              Download PDF
+            </button>
+          </div>
           <p className="text-portfolio-text-muted max-w-2xl mx-auto">
-            Experienced software architect passionate about building scalable applications and leading 
-            high-performing development teams. My career spans full-stack development with expertise in 
+            Experienced software architect passionate about building scalable applications and leading
+            high-performing development teams. My career spans full-stack development with expertise in
             modern web technologies and cloud platforms.
           </p>
         </div>
