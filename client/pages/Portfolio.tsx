@@ -13,7 +13,7 @@ export default function Portfolio() {
       id: 1,
       title: 'E-Commerce Platform',
       category: 'Web Design',
-      image: '/api/placeholder/400/300',
+      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop&auto=format&q=80',
       description: 'Modern e-commerce solution with advanced filtering and payment integration. Built with scalability and user experience in mind, featuring real-time inventory management and secure payment processing.',
       technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Docker'],
       githubUrl: 'https://github.com/alexanderchen/ecommerce-platform',
