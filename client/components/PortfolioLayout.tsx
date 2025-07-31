@@ -45,8 +45,15 @@ const socialLinks = [
 export default function PortfolioLayout({ children }: LayoutProps) {
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
+
+  const jobTitles = [
+    'UI/UX Designer',
+    'Frontend Developer',
+    'Full Stack Developer'
+  ];
 
   return (
     <div className="flex min-h-screen bg-portfolio-bg">
