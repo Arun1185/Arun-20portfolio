@@ -75,17 +75,24 @@ export default function PortfolioLayout({ children }: LayoutProps) {
 
       {/* Sidebar */}
       <div className={`
-        w-80 bg-portfolio-card border-r border-portfolio-border flex flex-col
-        fixed lg:relative inset-y-0 left-0 z-40 transform transition-transform duration-300 ease-in-out
+        w-80 bg-portfolio-card/95 backdrop-blur-lg border-r border-portfolio-border flex flex-col
+        fixed lg:relative inset-y-0 left-0 z-40 transform transition-all duration-300 ease-in-out
+        shadow-2xl lg:shadow-none
         ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
       `}>
         {/* Profile Section */}
-        <div className="p-8 text-center border-b border-portfolio-border">
-          <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-to-br from-portfolio-accent to-blue-600 flex items-center justify-center">
-            <span className="text-2xl font-bold text-white">AC</span>
+        <div className="p-8 text-center border-b border-portfolio-border relative">
+          {/* Background decoration */}
+          <div className="absolute inset-0 bg-gradient-to-br from-portfolio-accent/5 to-blue-500/5"></div>
+
+          <div className="relative">
+            <StylishPhoto size="md" initials="AC" className="mx-auto mb-4" />
+            <h2 className="text-xl font-bold text-portfolio-text mb-2">Alexander Chen</h2>
+            <div className="text-portfolio-accent text-sm font-medium mb-1">
+              <RotatingTitle titles={jobTitles} interval={2500} />
+            </div>
+            <p className="text-portfolio-text-muted text-xs">Passionate about creating digital experiences</p>
           </div>
-          <h2 className="text-xl font-bold text-portfolio-text mb-1">Alexander Chen</h2>
-          <p className="text-portfolio-text-muted text-sm">Full Stack Developer</p>
         </div>
 
         {/* Navigation */}
