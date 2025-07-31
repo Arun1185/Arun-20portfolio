@@ -40,7 +40,7 @@ export default function Portfolio() {
       id: 2,
       title: 'Task Management App',
       category: 'Mobile Apps',
-      image: '/api/placeholder/400/300',
+      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop&auto=format&q=80',
       description: 'Cross-platform mobile app for team collaboration and project management with real-time synchronization and offline capabilities.',
       technologies: ['React Native', 'Firebase', 'Redux', 'TypeScript'],
       githubUrl: 'https://github.com/alexanderchen/task-manager',
