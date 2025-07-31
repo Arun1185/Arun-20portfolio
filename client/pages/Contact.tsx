@@ -23,18 +23,29 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
-      // This is where you would implement the email sending logic
-      // For now, we'll simulate an API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      // Reset form and show success message
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      setSubmitStatus('success');
-      
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        // Reset form and show success message
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        setSubmitStatus('success');
+      } else {
+        setSubmitStatus('error');
+      }
+
       setTimeout(() => setSubmitStatus('idle'), 5000);
     } catch (error) {
+      console.error('Contact form error:', error);
       setSubmitStatus('error');
       setTimeout(() => setSubmitStatus('idle'), 5000);
     } finally {
