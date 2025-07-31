@@ -75,12 +75,8 @@ export default function Resume() {
           {/* Left Column - Profile & Skills */}
           <div className="space-y-8">
             {/* Profile Image */}
-            <div className="portfolio-card p-6 text-center">
-              <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-portfolio-accent to-blue-600 p-1">
-                <div className="w-full h-full rounded-full bg-portfolio-card flex items-center justify-center">
-                  <span className="text-2xl font-bold text-portfolio-text">AC</span>
-                </div>
-              </div>
+            <div className="portfolio-card p-6 text-center hover:shadow-xl transition-all duration-300">
+              <StylishPhoto size="lg" initials="AC" className="mx-auto mb-4" />
               
               <h3 className="text-xl font-bold text-portfolio-text mb-2">Professional Summary</h3>
               <p className="text-sm text-portfolio-text-muted leading-relaxed">
