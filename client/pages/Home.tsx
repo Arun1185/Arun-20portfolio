@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Download } from 'lucide-react';
+import StylishPhoto from '../components/StylishPhoto';
+import RotatingTitle from '../components/RotatingTitle';
 
 export default function Home() {
   return (
