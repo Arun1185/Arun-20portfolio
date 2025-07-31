@@ -4,69 +4,172 @@ import ProjectDetail from '../components/ProjectDetail';
 
 export default function Portfolio() {
   const [activeFilter, setActiveFilter] = useState('All Projects');
-  
+  const [selectedProject, setSelectedProject] = useState<number | null>(null);
+
   const filters = ['All Projects', 'Web Design', 'Mobile Apps', 'UI/UX', 'Backend'];
-  
+
   const projects = [
     {
       id: 1,
       title: 'E-Commerce Platform',
       category: 'Web Design',
       image: '/api/placeholder/400/300',
-      description: 'Modern e-commerce solution with advanced filtering and payment integration',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      githubUrl: '#',
-      liveUrl: '#'
+      description: 'Modern e-commerce solution with advanced filtering and payment integration. Built with scalability and user experience in mind, featuring real-time inventory management and secure payment processing.',
+      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Docker'],
+      githubUrl: 'https://github.com/alexanderchen/ecommerce-platform',
+      liveUrl: 'https://ecommerce-demo.alexanderchen.dev',
+      duration: '4 months',
+      manager: 'Sarah Johnson',
+      supportContact: '+1 (555) 123-4567',
+      features: [
+        'Advanced product filtering and search',
+        'Secure payment integration with Stripe',
+        'Real-time inventory management',
+        'Mobile-responsive design',
+        'Admin dashboard with analytics',
+        'Multi-language support'
+      ],
+      outcomes: [
+        'Increased conversion rate by 35%',
+        'Reduced page load time by 60%',
+        'Improved user engagement by 45%',
+        'Successfully handled 10k+ concurrent users'
+      ]
     },
     {
       id: 2,
       title: 'Task Management App',
       category: 'Mobile Apps',
       image: '/api/placeholder/400/300',
-      description: 'Cross-platform mobile app for team collaboration and project management',
-      technologies: ['React Native', 'Firebase', 'Redux'],
-      githubUrl: '#',
-      liveUrl: '#'
+      description: 'Cross-platform mobile app for team collaboration and project management with real-time synchronization and offline capabilities.',
+      technologies: ['React Native', 'Firebase', 'Redux', 'TypeScript'],
+      githubUrl: 'https://github.com/alexanderchen/task-manager',
+      liveUrl: 'https://taskapp.alexanderchen.dev',
+      duration: '3 months',
+      manager: 'Mike Rodriguez',
+      supportContact: '+1 (555) 987-6543',
+      features: [
+        'Real-time task synchronization',
+        'Offline functionality',
+        'Team collaboration tools',
+        'Push notifications',
+        'File attachments',
+        'Time tracking'
+      ],
+      outcomes: [
+        'Adopted by 500+ teams',
+        '99.9% uptime achieved',
+        'Reduced project delays by 40%',
+        'Increased team productivity by 25%'
+      ]
     },
     {
       id: 3,
       title: 'Digital Banking Interface',
       category: 'UI/UX',
       image: '/api/placeholder/400/300',
-      description: 'Intuitive banking interface design focused on user experience and accessibility',
-      technologies: ['Figma', 'Sketch', 'Principle'],
-      githubUrl: '#',
-      liveUrl: '#'
+      description: 'Intuitive banking interface design focused on user experience and accessibility, with modern design principles and security features.',
+      technologies: ['Figma', 'Sketch', 'Principle', 'Adobe XD'],
+      githubUrl: 'https://github.com/alexanderchen/banking-ui',
+      liveUrl: 'https://banking-demo.alexanderchen.dev',
+      duration: '2 months',
+      manager: 'Emma Wilson',
+      supportContact: '+1 (555) 456-7890',
+      features: [
+        'Accessible design (WCAG 2.1 AA)',
+        'Biometric authentication UI',
+        'Transaction visualization',
+        'Dark/light mode support',
+        'Multi-device consistency',
+        'Security-first approach'
+      ],
+      outcomes: [
+        'Improved user satisfaction by 50%',
+        'Reduced support tickets by 30%',
+        'Achieved 100% accessibility compliance',
+        'Decreased transaction time by 45%'
+      ]
     },
     {
       id: 4,
       title: 'Real Estate Platform',
       category: 'Web Design',
       image: '/api/placeholder/400/300',
-      description: 'Complete real estate marketplace with advanced search and virtual tours',
-      technologies: ['Next.js', 'TypeScript', 'PostgreSQL'],
-      githubUrl: '#',
-      liveUrl: '#'
+      description: 'Complete real estate marketplace with advanced search, virtual tours, and comprehensive property management system.',
+      technologies: ['Next.js', 'TypeScript', 'PostgreSQL', 'AWS'],
+      githubUrl: 'https://github.com/alexanderchen/realestate-platform',
+      liveUrl: 'https://realestate.alexanderchen.dev',
+      duration: '6 months',
+      manager: 'David Chen',
+      supportContact: '+1 (555) 321-0987',
+      features: [
+        'Advanced property search filters',
+        '360° virtual tours',
+        'Interactive maps integration',
+        'Mortgage calculator',
+        'Agent dashboard',
+        'Automated property valuation'
+      ],
+      outcomes: [
+        'Listed 10,000+ properties',
+        'Generated $2M+ in leads',
+        'Reduced time-to-sale by 20%',
+        'Achieved 95% user retention'
+      ]
     },
     {
       id: 5,
       title: 'Analytics Dashboard',
       category: 'Backend',
       image: '/api/placeholder/400/300',
-      description: 'Real-time analytics dashboard with data visualization and reporting',
-      technologies: ['Python', 'Django', 'Chart.js', 'Redis'],
-      githubUrl: '#',
-      liveUrl: '#'
+      description: 'Real-time analytics dashboard with data visualization and reporting capabilities for enterprise-level data processing.',
+      technologies: ['Python', 'Django', 'Chart.js', 'Redis', 'Docker'],
+      githubUrl: 'https://github.com/alexanderchen/analytics-dashboard',
+      liveUrl: 'https://analytics.alexanderchen.dev',
+      duration: '5 months',
+      manager: 'Lisa Park',
+      supportContact: '+1 (555) 654-3210',
+      features: [
+        'Real-time data processing',
+        'Custom dashboard creation',
+        'Automated report generation',
+        'API integrations',
+        'Data export capabilities',
+        'Role-based access control'
+      ],
+      outcomes: [
+        'Processed 1TB+ data daily',
+        'Reduced report generation time by 80%',
+        'Improved decision-making speed by 60%',
+        'Achieved 99.95% data accuracy'
+      ]
     },
     {
       id: 6,
       title: 'Social Media App',
       category: 'Mobile Apps',
       image: '/api/placeholder/400/300',
-      description: 'Social networking platform with real-time messaging and content sharing',
-      technologies: ['Flutter', 'Firebase', 'WebRTC'],
-      githubUrl: '#',
-      liveUrl: '#'
+      description: 'Social networking platform with real-time messaging, content sharing, and advanced community features.',
+      technologies: ['Flutter', 'Firebase', 'WebRTC', 'Node.js'],
+      githubUrl: 'https://github.com/alexanderchen/social-app',
+      liveUrl: 'https://social.alexanderchen.dev',
+      duration: '4 months',
+      manager: 'James Thompson',
+      supportContact: '+1 (555) 789-0123',
+      features: [
+        'Real-time messaging',
+        'Video/voice calls',
+        'Content creation tools',
+        'Community groups',
+        'Live streaming',
+        'Content moderation AI'
+      ],
+      outcomes: [
+        'Gained 50k+ active users',
+        'Achieved 98% message delivery rate',
+        'Reduced content moderation time by 70%',
+        'Increased user engagement by 85%'
+      ]
     }
   ];
 
