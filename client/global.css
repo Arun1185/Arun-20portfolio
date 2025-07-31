@@ -57,24 +57,24 @@
   }
 
   .dark {
-    /* Dark Mode */
-    --background: 210 11% 15%;
-    --foreground: 0 0% 98%;
+    /* Dark Mode - High Contrast */
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
 
-    --card: 210 11% 15%;
-    --card-foreground: 0 0% 98%;
+    --card: 224 71% 4%;
+    --card-foreground: 213 31% 91%;
 
-    --popover: 210 11% 15%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 224 71% 4%;
+    --popover-foreground: 213 31% 91%;
 
     --primary: 142 86% 28%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 213 31% 91%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
 
     --accent: 142 86% 28%;
     --accent-foreground: 0 0% 98%;
@@ -82,25 +82,25 @@
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
     --ring: 142 86% 28%;
 
-    --sidebar-background: 220 13% 18%;
-    --sidebar-foreground: 0 0% 98%;
+    --sidebar-background: 224 71% 6%;
+    --sidebar-foreground: 213 31% 91%;
     --sidebar-primary: 142 86% 28%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 220 13% 25%;
-    --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 220 13% 25%;
+    --sidebar-accent: 215 27.9% 16.9%;
+    --sidebar-accent-foreground: 213 31% 91%;
+    --sidebar-border: 215 27.9% 16.9%;
     --sidebar-ring: 142 86% 28%;
 
-    --portfolio-bg: 210 11% 15%;
-    --portfolio-card: 220 13% 18%;
-    --portfolio-text: 0 0% 98%;
-    --portfolio-text-muted: 0 0% 70%;
+    --portfolio-bg: 224 71% 4%;
+    --portfolio-card: 224 71% 6%;
+    --portfolio-text: 213 31% 91%;
+    --portfolio-text-muted: 217.9 10.6% 64.9%;
     --portfolio-accent: 142 86% 28%;
-    --portfolio-border: 220 13% 25%;
+    --portfolio-border: 215 27.9% 16.9%;
   }
 }
 
