@@ -57,6 +57,14 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        portfolio: {
+          bg: "hsl(var(--portfolio-bg))",
+          card: "hsl(var(--portfolio-card))",
+          text: "hsl(var(--portfolio-text))",
+          "text-muted": "hsl(var(--portfolio-text-muted))",
+          accent: "hsl(var(--portfolio-accent))",
+          border: "hsl(var(--portfolio-border))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
