@@ -123,7 +123,7 @@ export default function Contact() {
               <h3 className="text-lg font-semibold text-portfolio-text mb-4">
                 Why Choose Me?
               </h3>
-              <div className="space-y-4">
+              <div className="space-y-4 mb-6">
                 <div className="flex items-start">
                   <MessageCircle className="h-5 w-5 text-portfolio-accent mr-3 mt-1" />
                   <div>
@@ -133,7 +133,7 @@ export default function Contact() {
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <Clock className="h-5 w-5 text-portfolio-accent mr-3 mt-1" />
                   <div>
@@ -143,6 +143,15 @@ export default function Contact() {
                     </p>
                   </div>
                 </div>
+              </div>
+
+              {/* Contact Image */}
+              <div className="rounded-lg overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=400&h=250&fit=crop&auto=format&q=80"
+                  alt="Professional consultation"
+                  className="w-full h-32 object-cover"
+                />
               </div>
             </div>
           </div>
