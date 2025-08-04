@@ -15,8 +15,7 @@ import {
   Menu,
   X,
   Sun,
-  Moon,
-  Download
+  Moon
 } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 import StylishPhoto from './StylishPhoto';
