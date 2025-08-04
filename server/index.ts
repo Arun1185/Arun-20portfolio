@@ -23,6 +23,7 @@ export function createServer() {
   app.get("/api/demo", handleDemo);
   app.post("/api/contact", handleContactForm);
   app.get("/api/resume-download", handleResumeDownload);
+  app.get("/api/project-download", handleProjectDownload);
 
   return app;
 }
