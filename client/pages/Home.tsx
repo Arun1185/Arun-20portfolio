@@ -6,9 +6,10 @@ import RotatingTitle from '../components/RotatingTitle';
 
 export default function Home() {
   const jobTitles = [
-    'UI/UX Designer',
-    'Frontend Developer',
-    'Full Stack Developer'
+    'Civil Engineer',
+    'Software Engineer',
+    'Project Manager',
+    'Automation Engineer'
   ];
 
   return (
@@ -26,10 +27,10 @@ export default function Home() {
           <div className="space-y-6">
             <div className="space-y-4">
               <h1 className="text-5xl lg:text-6xl font-bold text-portfolio-text leading-tight bg-gradient-to-r from-portfolio-accent to-blue-500 bg-clip-text text-transparent">
-                SnapFolio
+                Snapfolio
               </h1>
               <h2 className="text-2xl font-semibold text-portfolio-text">
-                Alexander Chen
+                Arun Balasubramanian
               </h2>
               <p className="text-lg text-portfolio-accent font-medium">
                 I'm a <RotatingTitle titles={jobTitles} interval={2500} />

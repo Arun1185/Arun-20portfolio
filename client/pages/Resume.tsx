@@ -91,7 +91,7 @@ export default function Resume() {
     // In a real app, you would generate a PDF or serve a pre-made PDF file
     const link = document.createElement('a');
     link.href = '/api/resume-download'; // This would be your PDF endpoint
-    link.download = 'Alexander_Chen_Resume.pdf';
+    link.download = 'Arun_Balasubramanian_Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

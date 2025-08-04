@@ -26,7 +26,7 @@ export const handleProjectDownload: RequestHandler = (req, res) => {
             express: "^4.18.2",
             typescript: "^5.5.3",
           },
-          author: "Alexander Chen",
+          author: "Arun Balasubramanian",
           license: "MIT",
         },
         null,

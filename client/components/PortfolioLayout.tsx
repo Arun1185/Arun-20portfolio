@@ -36,19 +36,19 @@ const navigation = [
 ];
 
 const socialLinks = [
-  { name: "GitHub", href: "https://github.com/alexanderchen", icon: Github },
+  { name: "GitHub", href: "https://github.com/ArunBalasubramanian", icon: Github },
   {
     name: "LinkedIn",
-    href: "https://linkedin.com/in/alexanderchen",
+    href: "https://linkedin.com/in/arunbalasubramanian",
     icon: Linkedin,
   },
-  { name: "Twitter", href: "https://twitter.com/alexanderchen", icon: Twitter },
+  { name: "Twitter", href: "https://twitter.com/arunbalasubramanian", icon: Twitter },
   {
     name: "Instagram",
-    href: "https://instagram.com/alexanderchen",
+    href: "https://instagram.com/arunbalasubramanian",
     icon: Instagram,
   },
-  { name: "Phone", href: "tel:+15551234567", icon: Phone },
+  { name: "Phone", href: "tel:+91 81234 56789", icon: Phone },
 ];
 
 export default function PortfolioLayout({ children }: LayoutProps) {
@@ -59,9 +59,10 @@ export default function PortfolioLayout({ children }: LayoutProps) {
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   const jobTitles = [
-    "UI/UX Designer",
-    "Frontend Developer",
-    "Full Stack Developer",
+    'Civil Engineer',
+    'Software Engineer',
+    'Project Manager',
+    'Automation Engineer'
   ];
 
   const handleDownloadProject = () => {
@@ -113,7 +114,7 @@ export default function PortfolioLayout({ children }: LayoutProps) {
           <div className="relative">
             <StylishPhoto size="md" initials="AC" className="mx-auto mb-4" />
             <h2 className="text-xl font-bold text-portfolio-text mb-2">
-              Alexander Chen
+               Arun Balasubramanian
             </h2>
             <div className="text-portfolio-accent text-sm font-medium mb-1">
               <RotatingTitle titles={jobTitles} interval={2500} />
@@ -195,7 +196,7 @@ export default function PortfolioLayout({ children }: LayoutProps) {
 
           <div className="text-center mt-4">
             <p className="text-xs text-portfolio-text-muted">
-              © 2024 Alexander Chen
+              © 2025 Arun Balasubramanian
             </p>
           </div>
         </div>

@@ -5,9 +5,10 @@ import RotatingTitle from '../components/RotatingTitle';
 
 export default function About() {
   const jobTitles = [
-    'Creative Director',
-    'UI Developer',
-    'UX Researcher'
+    'Civil Engineer',
+    'Software Engineer',
+    'Project Manager',
+    'Automation Engineer'
   ];
 
   return (
@@ -21,7 +22,7 @@ export default function About() {
           <h1 className="portfolio-heading text-center">
             Passionate About Creating Digital
             <br />
-            <span className="bg-gradient-to-r from-portfolio-accent to-blue-500 bg-clip-text text-transparent">Experiences</span>
+            <span className="bg-gradient-to-r from-portfolio-accent to-blue-500 bg-clip-text text-transparent">Automation</span>
           </h1>
         </div>
 
@@ -35,7 +36,7 @@ export default function About() {
                 className="mx-auto mb-4"
                 imageUrl="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face&auto=format&q=80"
               />
-              <h2 className="text-2xl font-bold text-portfolio-text mb-2">Marcus Thompson</h2>
+              <h2 className="text-2xl font-bold text-portfolio-text mb-2">Arun Balasubramanian</h2>
               <div className="text-portfolio-accent font-medium">
                 <RotatingTitle titles={jobTitles} interval={3000} />
               </div>
@@ -44,15 +45,15 @@ export default function About() {
             <div className="space-y-4">
               <div className="flex items-center text-portfolio-text-muted">
                 <Mail className="h-4 w-4 mr-3 text-portfolio-accent" />
-                <span>marcus@example.com</span>
+                <span>consulting.arun@gmail.com</span>
               </div>
               <div className="flex items-center text-portfolio-text-muted">
                 <Phone className="h-4 w-4 mr-3 text-portfolio-accent" />
-                <span>+1 (555) 123-4567</span>
+                <span>+91 9876543210</span>
               </div>
               <div className="flex items-center text-portfolio-text-muted">
                 <MapPin className="h-4 w-4 mr-3 text-portfolio-accent" />
-                <span>San Francisco, CA</span>
+                <span>Chennai, Tamil Nadu</span>
               </div>
             </div>
           </div>
@@ -74,15 +75,15 @@ export default function About() {
             {/* Statistics */}
             <div className="grid grid-cols-3 gap-6">
               <div className="text-center">
-                <div className="text-3xl font-bold text-portfolio-accent mb-2">150+</div>
+                <div className="text-3xl font-bold text-portfolio-accent mb-2">50+</div>
                 <div className="text-sm text-portfolio-text-muted">Projects Completed</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-portfolio-accent mb-2">5+</div>
+                <div className="text-3xl font-bold text-portfolio-accent mb-2">10+</div>
                 <div className="text-sm text-portfolio-text-muted">Years Experience</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-portfolio-accent mb-2">98%</div>
+                <div className="text-3xl font-bold text-portfolio-accent mb-2">96%</div>
                 <div className="text-sm text-portfolio-text-muted">Client Satisfaction</div>
               </div>
             </div>

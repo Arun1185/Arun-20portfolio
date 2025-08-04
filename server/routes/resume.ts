@@ -12,7 +12,7 @@ ALEXANDER CHEN
 Software Engineer Portfolio
 
 Contact Information:
-Email: alexander.chen@email.com
+Email: arun.balasubramanian@email.com
 Phone: +1 (555) 123-4567
 Location: San Francisco, CA
 
@@ -63,7 +63,7 @@ Certifications:
 
     // Set headers for file download
     res.setHeader('Content-Type', 'application/pdf');
-    res.setHeader('Content-Disposition', 'attachment; filename="Alexander_Chen_Resume.pdf"');
+    res.setHeader('Content-Disposition', 'attachment; filename="Arun_Balasubramanian_Resume.pdf"');
     
     // In a real app, you would read and serve an actual PDF file
     // For demo purposes, we'll just send the text content
