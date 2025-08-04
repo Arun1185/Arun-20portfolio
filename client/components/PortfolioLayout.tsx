@@ -56,6 +56,16 @@ export default function PortfolioLayout({ children }: LayoutProps) {
     'Full Stack Developer'
   ];
 
+  const handleDownloadProject = () => {
+    // Create download link for the project zip
+    const link = document.createElement('a');
+    link.href = '/api/project-download';
+    link.download = 'portfolio-project.zip';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="flex min-h-screen bg-portfolio-bg">
       {/* Mobile Menu Button */}
