@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import {
   Home,
   User,
@@ -16,39 +16,31 @@ import {
   X,
   Sun,
   Moon,
-  Download,
-} from "lucide-react";
-import { useTheme } from "../contexts/ThemeContext";
-import StylishPhoto from "./StylishPhoto";
-import RotatingTitle from "./RotatingTitle";
+  Download
+} from 'lucide-react';
+import { useTheme } from '../contexts/ThemeContext';
+import StylishPhoto from './StylishPhoto';
+import RotatingTitle from './RotatingTitle';
 
 interface LayoutProps {
   children: React.ReactNode;
 }
 
 const navigation = [
-  { name: "Home", href: "/", icon: Home },
-  { name: "About", href: "/about", icon: User },
-  { name: "Resume", href: "/resume", icon: FileText },
-  { name: "Portfolio", href: "/portfolio", icon: Briefcase },
-  { name: "Services", href: "/services", icon: Settings },
-  { name: "Contact", href: "/contact", icon: Mail },
+  { name: 'Home', href: '/', icon: Home },
+  { name: 'About', href: '/about', icon: User },
+  { name: 'Resume', href: '/resume', icon: FileText },
+  { name: 'Portfolio', href: '/portfolio', icon: Briefcase },
+  { name: 'Services', href: '/services', icon: Settings },
+  { name: 'Contact', href: '/contact', icon: Mail },
 ];
 
 const socialLinks = [
-  { name: "GitHub", href: "https://github.com/alexanderchen", icon: Github },
-  {
-    name: "LinkedIn",
-    href: "https://linkedin.com/in/alexanderchen",
-    icon: Linkedin,
-  },
-  { name: "Twitter", href: "https://twitter.com/alexanderchen", icon: Twitter },
-  {
-    name: "Instagram",
-    href: "https://instagram.com/alexanderchen",
-    icon: Instagram,
-  },
-  { name: "Phone", href: "tel:+15551234567", icon: Phone },
+  { name: 'GitHub', href: 'https://github.com/alexanderchen', icon: Github },
+  { name: 'LinkedIn', href: 'https://linkedin.com/in/alexanderchen', icon: Linkedin },
+  { name: 'Twitter', href: 'https://twitter.com/alexanderchen', icon: Twitter },
+  { name: 'Instagram', href: 'https://instagram.com/alexanderchen', icon: Instagram },
+  { name: 'Phone', href: 'tel:+15551234567', icon: Phone },
 ];
 
 export default function PortfolioLayout({ children }: LayoutProps) {
@@ -59,16 +51,16 @@ export default function PortfolioLayout({ children }: LayoutProps) {
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   const jobTitles = [
-    "UI/UX Designer",
-    "Frontend Developer",
-    "Full Stack Developer",
+    'UI/UX Designer',
+    'Frontend Developer',
+    'Full Stack Developer'
   ];
 
   const handleDownloadProject = () => {
     // Create download link for the project zip
-    const link = document.createElement("a");
-    link.href = "/api/project-download";
-    link.download = "portfolio-project.zip";
+    const link = document.createElement('a');
+    link.href = '/api/project-download';
+    link.download = 'portfolio-project.zip';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -81,11 +73,7 @@ export default function PortfolioLayout({ children }: LayoutProps) {
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         className="lg:hidden fixed top-4 left-4 z-50 p-2 bg-portfolio-card border border-portfolio-border rounded-lg text-portfolio-text"
       >
-        {isMobileMenuOpen ? (
-          <X className="h-6 w-6" />
-        ) : (
-          <Menu className="h-6 w-6" />
-        )}
+        {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
       </button>
 
       {/* Mobile Overlay */}
@@ -97,14 +85,12 @@ export default function PortfolioLayout({ children }: LayoutProps) {
       )}
 
       {/* Sidebar */}
-      <div
-        className={`
+      <div className={`
         w-80 bg-portfolio-card/95 backdrop-blur-lg border-r border-portfolio-border flex flex-col
         fixed lg:relative inset-y-0 left-0 z-40 transform transition-all duration-300 ease-in-out
         shadow-2xl lg:shadow-none
-        ${isMobileMenuOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}
-      `}
-      >
+        ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
+      `}>
         {/* Profile Section */}
         <div className="p-8 text-center border-b border-portfolio-border relative">
           {/* Background decoration */}
@@ -112,15 +98,11 @@ export default function PortfolioLayout({ children }: LayoutProps) {
 
           <div className="relative">
             <StylishPhoto size="md" initials="AC" className="mx-auto mb-4" />
-            <h2 className="text-xl font-bold text-portfolio-text mb-2">
-              Alexander Chen
-            </h2>
+            <h2 className="text-xl font-bold text-portfolio-text mb-2">Alexander Chen</h2>
             <div className="text-portfolio-accent text-sm font-medium mb-1">
               <RotatingTitle titles={jobTitles} interval={2500} />
             </div>
-            <p className="text-portfolio-text-muted text-xs">
-              Passionate about creating digital experiences
-            </p>
+            <p className="text-portfolio-text-muted text-xs">Passionate about creating digital experiences</p>
           </div>
         </div>
 
@@ -137,16 +119,13 @@ export default function PortfolioLayout({ children }: LayoutProps) {
                     className={`
                       group flex items-center px-4 py-3 rounded-xl transition-all duration-300
                       hover:scale-105 hover:shadow-lg
-                      ${
-                        isActive
-                          ? "bg-gradient-to-r from-portfolio-accent to-blue-500 text-white shadow-xl"
-                          : "text-portfolio-text-muted hover:text-portfolio-text hover:bg-portfolio-border/50 hover:shadow-md"
+                      ${isActive
+                        ? 'bg-gradient-to-r from-portfolio-accent to-blue-500 text-white shadow-xl'
+                        : 'text-portfolio-text-muted hover:text-portfolio-text hover:bg-portfolio-border/50 hover:shadow-md'
                       }
                     `}
                   >
-                    <item.icon
-                      className={`h-5 w-5 mr-3 transition-transform duration-300 ${isActive ? "" : "group-hover:scale-110"}`}
-                    />
+                    <item.icon className={`h-5 w-5 mr-3 transition-transform duration-300 ${isActive ? '' : 'group-hover:scale-110'}`} />
                     <span className="font-medium">{item.name}</span>
                     {isActive && (
                       <div className="ml-auto w-2 h-2 bg-white rounded-full animate-pulse"></div>
@@ -157,13 +136,23 @@ export default function PortfolioLayout({ children }: LayoutProps) {
             })}
           </ul>
 
-          {/* Theme Toggle */}
-          <div className="mt-6 pt-6 border-t border-portfolio-border">
+          {/* Action Buttons */}
+          <div className="mt-6 pt-6 border-t border-portfolio-border space-y-2">
+            {/* Download Project Button */}
+            <button
+              onClick={handleDownloadProject}
+              className="w-full flex items-center justify-center px-4 py-3 rounded-xl bg-portfolio-accent/10 hover:bg-portfolio-accent text-portfolio-accent hover:text-white transition-all duration-300 hover:scale-105 hover:shadow-lg"
+            >
+              <Download className="h-5 w-5 mr-2" />
+              <span className="font-medium">Download Project</span>
+            </button>
+
+            {/* Theme Toggle */}
             <button
               onClick={toggleTheme}
               className="w-full flex items-center justify-center px-4 py-3 rounded-xl bg-portfolio-border/50 hover:bg-portfolio-accent/10 text-portfolio-text-muted hover:text-portfolio-accent transition-all duration-300 hover:scale-105"
             >
-              {theme === "light" ? (
+              {theme === 'light' ? (
                 <>
                   <Moon className="h-5 w-5 mr-2" />
                   <span className="font-medium">Dark Mode</span>
@@ -202,7 +191,9 @@ export default function PortfolioLayout({ children }: LayoutProps) {
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 overflow-y-auto lg:ml-0">{children}</div>
+      <div className="flex-1 overflow-y-auto lg:ml-0">
+        {children}
+      </div>
     </div>
   );
 }
