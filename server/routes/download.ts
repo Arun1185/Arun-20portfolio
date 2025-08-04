@@ -1,35 +1,39 @@
 import { RequestHandler } from "express";
-import * as fs from 'fs';
-import * as path from 'path';
+import * as fs from "fs";
+import * as path from "path";
 
 export const handleProjectDownload: RequestHandler = (req, res) => {
   try {
     // For demonstration purposes, we'll create a simplified project structure
     // In a real application, you might use a library like 'archiver' to create actual zip files
-    
+
     const projectData = {
-      'package.json': JSON.stringify({
-        "name": "portfolio-project",
-        "version": "1.0.0",
-        "description": "Modern IT Software Engineer Portfolio",
-        "main": "index.js",
-        "scripts": {
-          "dev": "vite",
-          "build": "npm run build:client && npm run build:server",
-          "start": "node dist/server/node-build.mjs"
+      "package.json": JSON.stringify(
+        {
+          name: "portfolio-project",
+          version: "1.0.0",
+          description: "Modern IT Software Engineer Portfolio",
+          main: "index.js",
+          scripts: {
+            dev: "vite",
+            build: "npm run build:client && npm run build:server",
+            start: "node dist/server/node-build.mjs",
+          },
+          dependencies: {
+            react: "^18.3.1",
+            "react-dom": "^18.3.1",
+            "react-router-dom": "^6.26.2",
+            express: "^4.18.2",
+            typescript: "^5.5.3",
+          },
+          author: "Alexander Chen",
+          license: "MIT",
         },
-        "dependencies": {
-          "react": "^18.3.1",
-          "react-dom": "^18.3.1",
-          "react-router-dom": "^6.26.2",
-          "express": "^4.18.2",
-          "typescript": "^5.5.3"
-        },
-        "author": "Alexander Chen",
-        "license": "MIT"
-      }, null, 2),
-      
-      'README.md': `# Portfolio Project
+        null,
+        2,
+      ),
+
+      "README.md": `# Portfolio Project
 
 ## Modern IT Software Engineer Portfolio
 
@@ -82,7 +86,7 @@ server/          # Express backend
 Alexander Chen - Full Stack Developer
 `,
 
-      'client/App.tsx': `import "./global.css";
+      "client/App.tsx": `import "./global.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import PortfolioLayout from "./components/PortfolioLayout";
@@ -112,7 +116,7 @@ export default function App() {
   );
 }`,
 
-      'server/index.ts': `import express from "express";
+      "server/index.ts": `import express from "express";
 import cors from "cors";
 
 export function createServer() {
@@ -128,13 +132,13 @@ export function createServer() {
   return app;
 }`,
 
-      '.gitignore': `node_modules/
+      ".gitignore": `node_modules/
 dist/
 .env
 .DS_Store
 *.log`,
 
-      'tailwind.config.js': `module.exports = {
+      "tailwind.config.js": `module.exports = {
   content: ["./client/**/*.{ts,tsx}"],
   darkMode: ["class"],
   theme: {
@@ -150,13 +154,13 @@ dist/
     },
   },
   plugins: [],
-};`
+};`,
     };
 
     // Create a simple text-based "zip" content
     let zipContent = "PORTFOLIO PROJECT FILES\n";
     zipContent += "========================\n\n";
-    
+
     for (const [filename, content] of Object.entries(projectData)) {
       zipContent += `\n--- ${filename} ---\n`;
       zipContent += content;
@@ -164,14 +168,16 @@ dist/
     }
 
     // Set headers for file download
-    res.setHeader('Content-Type', 'application/zip');
-    res.setHeader('Content-Disposition', 'attachment; filename="portfolio-project.zip"');
-    
+    res.setHeader("Content-Type", "application/zip");
+    res.setHeader(
+      "Content-Disposition",
+      'attachment; filename="portfolio-project.zip"',
+    );
+
     // Send the "zip" content
     res.send(zipContent);
-    
   } catch (error) {
-    console.error('Project download error:', error);
-    res.status(500).json({ error: 'Failed to download project' });
+    console.error("Project download error:", error);
+    res.status(500).json({ error: "Failed to download project" });
   }
 };
