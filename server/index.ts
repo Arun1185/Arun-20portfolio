@@ -4,6 +4,7 @@ import cors from "cors";
 import { handleDemo } from "./routes/demo";
 import { handleContactForm } from "./routes/contact";
 import { handleResumeDownload } from "./routes/resume";
+import { handleProjectDownload } from "./routes/download";
 
 export function createServer() {
   const app = express();
