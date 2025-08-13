@@ -318,9 +318,6 @@ export default function Portfolio() {
           </div>
         </div>
 
-        {/* Tech Stack Section */}
-        <TechStack />
-
         {/* Project Detail Modal */}
         {selectedProject && (
           <ProjectDetail
