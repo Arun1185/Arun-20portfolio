@@ -182,13 +182,18 @@ export default function Portfolio() {
     <div className="portfolio-section">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <h1 className="portfolio-heading">Portfolio</h1>
-          <p className="text-portfolio-text-muted max-w-2xl mx-auto">
-            Explore my latest projects showcasing innovative solutions across web development, 
-            mobile applications, and user interface design. Each project represents a unique 
+          <p className="text-portfolio-text-muted max-w-2xl mx-auto mb-8">
+            Explore my latest projects showcasing innovative solutions across web development,
+            mobile applications, and user interface design. Each project represents a unique
             challenge solved with modern technologies and best practices.
           </p>
+        </div>
+
+        {/* Tech Stack Section */}
+        <div className="mb-12">
+          <TechStack />
         </div>
 
         {/* Filter Buttons */}
