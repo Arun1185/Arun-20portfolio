@@ -151,6 +151,10 @@
   .animate-glow {
     animation: glow 2s ease-in-out infinite alternate;
   }
+
+  .animate-scroll {
+    animation: scroll 20s linear infinite;
+  }
 }
 
 @keyframes float {
